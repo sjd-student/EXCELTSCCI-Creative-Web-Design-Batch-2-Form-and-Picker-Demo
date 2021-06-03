@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- css -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- icon -->
+    <script src="https://kit.fontawesome.com/ed8665bf0e.js" crossorigin="anonymous"></script>
+
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rent-A-Canopy</title>
+
+    <style>
+        header{
+            background: url(img/tent-canopy.jpg);
+            background-size: cover;
+            background-position: center;
+            min-height:580px;
+        }
+        @media screen and (max-width: 280px) {
+            header{
+                min-height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- navbar -->
+    <header>
+        <nav class="nav-wrapper transparent">
+            <div class="container">
+                <a href="" class="brand-logo center">Canopy Tents</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- forms-->
+    <section class="section container">
+        <div class="row">
+            <div class="col s6 m6 l6">
+                <h3 class="deep-purple-text text-darken-4">Rent a canopy tent</h3>
+                <p class="deep-purple-text text-darken-4">Schedule your date and what time will you get the rented canopy tent.<p class="deep-purple-text text-darken-4">Renting is unavailable in the weekends.</p>
+            </div>
+
+            <div class="col s6 m6 l6">
+                <form>
+                    <div class="input-field">
+                        <i class="fas fa-user prefix"></i>
+                        <input placeholder="Name of person borrowing" type="text">
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-mobile-alt prefix"></i>
+                        <input placeholder="Contact Number" type="text">
+                    </div>
+                    <div class="input-field">
+                        <i class="far fa-calendar-alt prefix"></i>
+                        <input placeholder="Date" type="text" class="datepicker">
+                    </div>
+                    <div class="input-field">
+                        <i class="far fa-clock prefix"></i>
+                        <input placeholder="Select what time will you pick-up tent" type="text" class="timepicker">
+                    </div>
+                    <button type="submit" class="btn waves-effects waves-light">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+        //datepicker
+            $('.datepicker').datepicker({
+                disableWeekends: true
+            });
+        //timepicker
+            $('.timepicker').timepicker();
+        });
+    </script>
+</body>
+</html>
